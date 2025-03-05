@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(234, 12%, 34%);
+  line-height: 1.5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  "hero hero hero"
+  ". team-builder ."
+  ". team-builder ."
+  "supervisor team-builder calculator"
+  "supervisor karma calculator"
+  ". karma ."
+  ". karma .";
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.hero {
+  grid-area: hero;
+  text-align: center;
+}
+
+.hero h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: hsl(210, 27%, 4%);
+}
+
+.hero p {
+  font-size: 0.95rem;
+  color: hsl(212, 6%, 44%);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.supervisor {
+  grid-area: supervisor;
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+  grid-area: team-builder;
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.calculator {
+  grid-area: calculator;
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.karma {
+  grid-area: karma;
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: hsl(212, 6%, 44%);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.card img {
+  width: 40px;
+  float: right;
+}
